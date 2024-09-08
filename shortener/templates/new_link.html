@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shorten link</title>
+</head>
+<body>
+<form action="{% url 'shorten_link' %}" method="post">
+    {% csrf_token %}
+    <label for="destination_url">
+        URL: <input type="url" placeholder="https://example.com" name="destination_url" required>
+    </label>
+    <button>Shorten!</button>
+</form>
+</body>
+</html>
